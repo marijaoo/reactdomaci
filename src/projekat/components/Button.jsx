@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 
-export class Button extends Component {
-  render() {
-    return (
-      <div>Button</div>
-    )
-  }
-}
+export default function Button ({text, key, onClick}) {
 
-export default Button
+    return (
+      <button className={`btn `} key={key} onClick={onClick}> {text} </button>
+    )
+
+}

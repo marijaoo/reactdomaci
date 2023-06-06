@@ -3,7 +3,7 @@ import Button from './Button'
 
 export default function Proizvod({proizvod}){
 
-    const {title,img} = proizvod;
+    const {title,img,price} = proizvod;
 
     return (
       <li class={`card text-center liststyle`} style={{width:250}}>
@@ -16,7 +16,7 @@ export default function Proizvod({proizvod}){
 
         </p>
         <div className="card-footer d-flex space-between">
-            <h4>Cena</h4>
+            <h4>Cena: {price}</h4>
             <Button btnClass={"btn-success"} text="Kupi!" />
 
         </div>
