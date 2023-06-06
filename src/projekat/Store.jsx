@@ -6,6 +6,9 @@ import Proizvodi from "../projekat/components/Proizvodi"
 import { proizvodiDB } from './db/proizvodiDB';
 import { valuteDB } from './db/valuteDB';
 
+//Kontekst
+import { ValuteKontekst } from './context/valute-kontekst';
+
 document.body.style.backgroundColor="#282c34";
 document.body.style.color="#eee";
 
@@ -14,6 +17,8 @@ export default function Store() {
     const[valuta,setValuta]=useState(valuteDB.Dinar)
 
   return (
+    <ValuteKontekst.Provider value={valuta}>
+
     <div className="App-header">
         
         <h4>Promeni valutu:</h4>
@@ -40,8 +45,6 @@ export default function Store() {
         
     </div>
 
-
-
-
+    </ValuteKontekst.Provider>
   )
 }
