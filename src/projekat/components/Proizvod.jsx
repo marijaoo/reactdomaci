@@ -8,7 +8,7 @@ export default function Proizvod({proizvod}){
     const valuta = React.useContext(ValuteKontekst);
 
     //ucitavanje kartica
-    const {title,img,price} = proizvod;
+    const {title,img,price,opis} = proizvod;
 
     const kontekstCena = new Intl.NumberFormat("en-US",{
         style:"currency",
@@ -22,7 +22,7 @@ export default function Proizvod({proizvod}){
         <img src={img} alt="proizvod slika" style={{height:"120px"}}/>
         <p className="card-body">
 
-            Lorem ipsum dolor sit amet cons
+            {opis}
 
         </p>
         <div className="card-footer d-flex space-between">
