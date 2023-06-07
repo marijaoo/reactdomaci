@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 
-function App() {
+function Vise() {
   const minPasswordLength = 8
 
   const [form, setForm] = useState({
@@ -42,8 +42,6 @@ function App() {
   return (
       
       <section>
-
-
             <div className="text-center">
               <span className="title text-center">
                 Prijavi se pre poručivanja🎉
@@ -55,7 +53,7 @@ function App() {
           autoComplete="false"
           action="http://localhost:3000/"
           method="GET"
-          onChange={handleForm}
+          onChange={handleForm} //pozivanje provere podataka pri svakoj izmeni
           className='text-center'
         >
           <div className="input-block">
@@ -84,12 +82,8 @@ function App() {
               <b>Šifra:</b>
             </label>
             <br></br>
-            <span className="input-password-group">
+            <span>
               <input
-                className={`input ${form.password.length < minPasswordLength
-                  ? 'wrong-input'
-                  : 'correct-input'
-                }  ${!form.password ? 'empty' : ''}`}
                 id="password"
                 type={isPasswordShown ? 'text' : 'password'}
                 name="password"
@@ -142,4 +136,4 @@ function App() {
   )
 }
 
-export default App
+export default Vise
