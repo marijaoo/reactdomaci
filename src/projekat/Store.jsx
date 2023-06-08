@@ -20,8 +20,6 @@ export default function Store() {
     <ValuteKontekst.Provider value={valuta}>
 
     <div className="App-header">
-        
-        
 
         <header className="text-center"> 
             <h1 className="title">Rasprodaja</h1>
